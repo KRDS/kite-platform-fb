@@ -1,4 +1,4 @@
-define('kite/platforms/facebook/toolbox', ['module', 'kite/platforms/facebook'], function(Module, Facebook)
+define(['module', '../facebook'], function(Module, Facebook)
 {	
 	var conf		=	Module.config();
 		

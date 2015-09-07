@@ -27,7 +27,7 @@
  * 6.6: + Permissions Manager with cache
  * 6.5: - Deprecated perms stuff
  **/
-define('kite/platforms/facebook', ['kite/core', 'jquery'], function(Core)
+define(['kite/core', 'jquery'], function(Core)
 {	
 	var Facebook = {
 		version			: '0.9.4',
