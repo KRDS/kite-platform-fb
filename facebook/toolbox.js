@@ -223,6 +223,15 @@ define(['module', '../facebook'], function(Module, Facebook)
 						$('#_fb_tbox_details').prepend(waitingPicSt);
 
 						_this.busy	=	true;
+						
+						/* Dynamic shim config */
+						requirejs.config({
+							shim: {
+								'libs/modernizr/modernizr': {
+									exports: 'Modernizr'
+								}
+							}
+						});
 
 						require(['libs/modernizr/modernizr', 'libs/detectizr/dist/detectizr.min'], function()
 						{			
