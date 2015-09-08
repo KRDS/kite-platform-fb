@@ -1,6 +1,7 @@
 /*! ©2010-Present KRDS. All rights reserved. */
 
 /**
+ * 9.5: fb-form created dynamically
  * 9.4: FBG 2.0
  * 9.3: - Kite 0.8, handleCallbackRelLinks / handleCanvasRelLinks removed and some rewriting
  * 9.2: 2 read_page_mailboxes permission
@@ -30,7 +31,7 @@
 define(['kite/core', 'jquery'], function(Core)
 {	
 	var Facebook = {
-		version			: '0.9.4',
+		version			: '0.9.5',
 		isInit			: false,
 		isReady			: false,
 		ajaxPreFiltered	: false,
@@ -72,6 +73,12 @@ define(['kite/core', 'jquery'], function(Core)
 
 			$(document).ready(function()
 			{
+				var f = document.createElement('form');
+				f.action = '';
+				f.method = 'post';
+				f.id = 'fb-form';
+				document.body.appendChild(f);
+				
 				if(window.FB)
 					Facebook._onReady();
 				else
